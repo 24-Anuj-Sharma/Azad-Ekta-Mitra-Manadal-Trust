@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contactus.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+  <link rel="stylesheet" href="/favicon/site.webmanifest">
+  <script src="/script.js"></script>
+</head>
+<body>
+  <nav>
+    <a href="/index.html"><img src="/Asset/logo1.png" alt="Logo"></a>
+    <div id="nav-2">
+      <h4><a href="/index.html">Home</a></h4>
+      <h4><a href="/Members/members.html">Committee</a></h4>
+      <h4><a href="/About Us/aboutus.html">About Us</a></h4>
+      <h4><a href="/Contact Us/contactus.html" style="color: rgba(134, 33, 25); text-decoration: underline; text-transform: uppercase;">Contact Us</a></h4>
+      <button class="nav-button" id="qrbtn">Donations</button>    
+    </div>
+  </nav>
+
+  <div id="qrcode" class="qr">
+    <div class="qr-content">
+      <button class="close-button" id="closeQRCodeBtn">&times; Close</button>
+      <div class="qr-code">
+          <img src="/Asset/qr_payment.jpg" alt="QR Code">
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+    <section id="contact">
+      <h1>Contact Us</h1>
+      <p><strong>Azad Ekta Mitra Mandal Sarvajanik Ganeshotsav Mandal</strong><br>
+        41/1, opposite Ramchandra Sabhagruha,<br>
+        Police Lines, Wadgaon Sheri, Pune, Maharashtra 411014<br>
+        Telephone: <a href="tel:+918305601990">022-2471 3626</a><br>
+        Email: <a href="mailto:lrsgm@rediffmail.com">lrsgm@rediffmail.com</a></p>
+    </section>
+    
+    <section id="map">
+      <h2>Our Location:</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.1423782058214!2d73.91815767497644!3d18.553985282546037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c118458dce67%3A0x5610b48dcbbe4e28!2sAzad%20Ekta%20Mitra%20Mandal%20Trust!5e1!3m2!1sen!2sin!4v1726832301901!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+    
+    <section id="language">
+      <h2>Language:</h2>
+      <p>English</p>
+    </section>
+    
+    <section id="announcements">
+      <h2>Latest Announcements:</h2>
+      <ul>
+        <li>Aagaman Sohala</li>
+        <li>The Azad Ekta Mitra Mandal Trust Mandap Poojan 2024</li>
+        <li>Shri Ganesh Muhurta Pujan</li>
+        <li>Mandap Pooja</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="/index.html"><img src="/Asset/logo1.png" alt="Logo"></a>
+        </div>
+        <div class="footer-info">
+          <p> Azad Ekta Mitra Mandal (Trust) </p>
+          <div class="about-us-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2024 Azad Ekta Mitra Manadal. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="scroll-up">
+    <img src="/Asset/uparrow.png" alt="Scroll Up">
+  </div>
+
+  <script>
+    document.getElementById('qrbtn').addEventListener('click', function() {
+      document.getElementById('qrcode').style.display = 'flex';
+    });
+
+    document.getElementById('closeQRCodeBtn').addEventListener('click', function() {
+      document.getElementById('qrcode').style.display = 'none';
+      window.location.href = '/Donation/donation.html'; 
+    });
+
+    window.onclick = function(event) {
+      if (event.target === document.getElementById('qrcode')) {
+        document.getElementById('qrcode').style.display = 'none';
+        window.location.href = '/Donation/donation.html';
+      }
+    }
+  </script>
+</body>
+</html>

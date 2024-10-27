@@ -1,0 +1,589 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fcfdd1;
+    color: #333;
+    line-height: 1.6;
+  }
+/* Navigation Bar style  */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all ease 0.4s;
+  }
+
+/* Fixed Nacigation */
+#nav-2 {
+  display: flex;
+  margin: 5px;
+}
+
+#nav-2 h4 {
+  display: flex;
+  padding: 10px 20px;
+}
+
+#nav-2 h4::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.4s;
+
+}
+
+#nav-2 h4:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+#nav-2 h4 a {
+  color: #887555;
+  text-decoration: none;
+  position: relative;
+  z-index: 9;
+}
+
+#nav-2 h4:hover a {
+  color: rgba(134, 33, 25);
+}
+
+/* Navigation Image  */
+nav img {
+  
+  margin: 0px 0px -5px;
+  top: 0px;
+  position: relative;
+  width: max-content;
+  height: 92px;
+}
+
+/* QR Code Poup */
+.nav-container {
+display: flex;
+align-items: center;
+padding: 10px;
+background-color: #f8f8f8;
+}
+
+.nav-container h4 {
+margin: 0 10px;
+}
+
+.nav-button {
+background-color: black;
+color: rgba(134, 33, 25);
+text-transform: uppercase;
+border: none;
+padding: 10px 20px;
+margin-left: 20px;
+cursor: pointer;
+border-radius: 5px;
+}
+
+.nav-button:hover {
+background-color: #a6281a;
+}
+/* QR Code Popup  */
+.qr {
+display: none;
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.5);
+align-items: center;
+justify-content: center;
+}
+
+.qr-content {
+text-align: center;
+}
+
+.close-button {
+background-color: #f44336;
+color: white;
+border: none;
+padding: 10px;
+cursor: pointer;
+border-radius: 5px;
+}
+
+.close-button:hover {
+background-color: #c62828;
+}
+
+.qr-code {
+margin: 20px 0;
+}
+
+/* QR Imagev  */
+.qr-content img{
+width: 50%;
+height: 100%;
+}
+
+  /* Donation Tyle */
+
+  .donation-container {
+    top: -75px;
+    position: relative;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 120px auto;
+}
+h1 {
+    color: #ff5722;
+    margin-bottom: 20px;
+}
+.donation-content p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    margin: 0 20px 20px 20px;
+}
+.donation-content a {
+    color: #ff5722;
+    text-decoration: underline;
+}
+/* QR Section */
+.qr-code-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin: 20px 0;
+}
+.qr-code {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: filter 0.3s ease;
+    filter: blur(10px);
+    overflow: hidden;
+}
+.qr-code-container.active .qr-code {
+    filter: blur(0);
+}
+.qr-code-container img {
+    width: 100%;
+    height: auto;
+}
+.qr-code-lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.qr-code-lightbox img {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+}
+.qr-code-lightbox.active {
+    display: flex;
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+  /* Scroll to Top Button */
+.scroll-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #eb0000;
+  color: aqua;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+}
+
+.scroll-up img {
+  width: 20px;
+  height: 20px;
+}
+
+.scroll-up:hover {
+  background-color: blueviolet;
+}
+
+body.scrolled .scroll-up {
+  display: block;
+}
+
+
+
+    /* Footer */
+  
+    .site-footer {
+      border-top: 10px solid gold;
+      background-color: rgba(130,33,26,255);
+      color: black;
+      padding-top: 9px;
+    }
+    
+    .footer {
+      background-color: rgba(130,33,26,255);
+      color: rgba(130,33,26,255);
+      padding: 20px 0;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+  
+    .footer-container {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    
+    .footer-logo img {
+      width: 80px;
+      height: auto;
+    }
+    
+    .footer-info {
+      margin-left: 20px;
+    }
+    
+    .footer-info p {
+      margin: 0;
+      font-weight: bold;
+    }
+    .social-icons {
+      margin-top: 0px;
+    }
+    
+    .social-icons a {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  
+    .social-icons img {
+      display: block;
+      height: auto;
+      margin: 0 auto;
+    }
+    
+    .social-icons {
+      margin-bottom: 20px;
+    }
+    
+    .social-icons a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 50%;
+      margin-right: 10px;
+      color: whitesmoke;
+      background-color: 0 2px 5px rgba(0, 0, 0, 0.3);
+      transition: all 0.4s ease;
+    }
+    
+    .social-icons a:hover {
+      transform: translate(-3px);
+    }
+    
+    .footer-copyright {
+      margin-top: 20px;
+    }
+/* QR Code Popup  */
+.qr {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-content {
+  /* background-color: #fff;
+  padding: 20px;
+  border-radius: 8px; */
+  text-align: center;
+}
+
+.close-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.close-button:hover {
+  background-color: #c62828;
+}
+
+.qr-code {
+  margin: 20px 0;
+}
+
+/* QR Imagev  */
+
+
+.qr-content img{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+/* Respnocsive media queries  */
+
+/* Media Queries */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  #nav-2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #nav-2 h4 {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .donation-container {
+    padding: 20px;
+    margin: 60px auto;
+  }
+
+  .donation-content p {
+    font-size: 1rem;
+    margin: 0 10px 10px 10px;
+  }
+
+  .qr-code-container {
+    width: 100%;
+  }
+
+  .qr-code-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-info {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/* Mobile and below */
+@media (max-width: 480px) {
+  nav img {
+    width: 80px;
+  }
+
+  #nav-2 h4 {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .donation-container {
+    padding: 15px;
+  }
+
+  .donation-content p {
+    font-size: 0.9rem;
+    margin: 0 5px 5px 5px;
+  }
+
+  .qr-code-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-logo img {
+    width: 60px;
+  }
+
+  .social-icons a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
+/* Additional responsive tweaks for navigation and layout */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #nav-2 {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #nav-2 h4 {
+    padding: 10px 0;
+  }
+
+  .nav-button {
+    width: 96%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+/* 
+Responsive website code  */
+
+/* Responsive Design */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  /* Adjust navigation bar styles */
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  #nav-2 {
+    flex-direction: column;
+    margin: 10px;
+  }
+  #nav-2 h4 {
+    padding: 10px;
+    font-size: 14px;
+  }
+  /* Adjust donation container styles */
+  .donation-container {
+    padding: 20px;
+    margin: 60px auto;
+  }
+  .donation-content p {
+    font-size: 1rem;
+    margin: 0 10px 10px 10px;
+  }
+  /* Adjust QR code container styles */
+  .qr-code-container {
+    width: 100%;
+  }
+  .qr-code-container img {
+    width: 100%;
+    height: auto;
+  }
+  /* Adjust footer styles */
+  .footer-content {
+    flex-direction: column;
+  }
+  .footer-info {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/* Mobile and below */
+@media (max-width: 480px) {
+  nav img {
+    width: 80px;
+  }
+  #nav-2 h4 {
+    font-size: 12px;
+    padding: 5px;
+  }
+  .donation-container {
+    padding: 15px;
+  }
+  .donation-content p {
+    font-size: 0.9rem;
+    margin: 0 5px 5px 5px;
+  }
+  .qr-code-container img {
+    width: 100%;
+    height: auto;
+  }
+  .footer-logo img {
+    width: 60px;
+  }
+  .social-icons a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
+/* Additional responsive tweaks for navigation and layout */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #nav-2 {
+    flex-direction: column;
+    width: 100%;
+  }
+  #nav-2 h4 {
+    padding: 10px 0;
+  }
+  .nav-button {
+    width: 96%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}

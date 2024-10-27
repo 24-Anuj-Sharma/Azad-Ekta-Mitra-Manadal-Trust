@@ -1,0 +1,386 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fcfdd1;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation Bar style */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all ease 0.4s;
+}
+
+#nav-2 {
+  display: flex;
+  margin: 5px;
+}
+
+#nav-2 h4 {
+  display: flex;
+  padding: 10px 20px;
+}
+
+#nav-2 h4::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.4s;
+}
+
+#nav-2 h4:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+#nav-2 h4 a {
+  color: #887555;
+  text-decoration: none;
+  position: relative;
+  z-index: 9;
+}
+
+#nav-2 h4:hover a {
+  color: rgba(134, 33, 25);
+}
+
+nav img {
+  margin: 0px 0px -5px;
+  top: 0px;
+  position: relative;
+  width: max-content;
+  height: 92px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f8f8;
+}
+
+.nav-container h4 {
+  margin: 0 10px;
+}
+
+.nav-button {
+  background-color: rgba(134, 33, 25);
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-button:hover {
+  background-color: #a6281a;
+}
+
+/* QR Code Popup */
+.qr {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-content {
+  text-align: center;
+}
+
+.close-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.close-button:hover {
+  background-color: #c62828;
+}
+
+.qr-code {
+  margin: 20px 0;
+}
+
+.qr-content img {
+  width: 50%;
+  height: 100%;
+}
+
+/* Map Styling */
+#map {
+  margin-top: 20px;
+  padding: 10px;
+  background: #f9f9f9; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#map h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#map iframe {
+  border: none;
+  border-radius: 8px; 
+  width: 100%;
+  height: 450px; 
+}
+
+/* Responsive Design for Map */
+@media (max-width: 768px) {
+  #map iframe {
+    height: 300px; 
+  }
+}
+
+/* Main container styling */
+.container {
+  position: relative;
+  max-width: 900px;
+  top: 100px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #bcbca5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 150px;
+}
+
+/* Section styling */
+section {
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+h2 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+/* Contact information styling */
+#contact p {
+  font-size: 1rem;
+}
+
+#contact a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Language and announcements section */
+#language p, #announcements ul {
+  margin-top: 10px;
+}
+
+#announcements ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 10px solid gold;
+  background-color: rgba(130,33,26,255);
+  color: black;
+  padding-top: 9px;
+}
+
+.footer {
+  background-color: rgba(130,33,26,255);
+  color: rgba(130,33,26,255);
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.footer-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  width: 80px;
+  height: auto;
+}
+
+.footer-info {
+  margin-left: 20px;
+}
+
+.footer-info p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.about-us-links a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.about-us-links img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
+.about-us-links {
+  margin-bottom: 20px;
+}
+
+.about-us-links a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+}
+
+.about-us-links a:hover {
+  transform: translate(-3px);
+}
+
+.footer-copyright {
+  margin-top: 20px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Scroll to Top Button */
+.scroll-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #eb0000;
+  color: aqua;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+}
+
+.scroll-up img {
+  width: 20px;
+  height: 20px;
+}
+
+.scroll-up:hover {
+  background-color: blueviolet;
+}
+
+body.scrolled .scroll-up {
+  display: block;
+}
+
+/* Responsive Design Adjustments */
+
+/* General Resets for Images */
+img {
+  max-width: 100%; /* Ensure all images are responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack nav items */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  #nav-2 {
+    flex-direction: column; /* Stack nav items */
+    width: 100%; /* Full width */
+  }
+
+  #nav-2 h4 {
+    padding: 10px 0; /* Adjust padding */
+  }
+
+  #map iframe {
+    height: 250px; /* Reduced height */
+  }
+
+  .container {
+    padding: 10px; /* Adjust padding */
+  }
+}
+
+/* Mobile and below */
+@media (max-width: 480px) {
+  nav img {
+    width: 50px; /* Smaller logo */
+  }
+
+  #nav-2 h4 {
+    font-size: 14px; /* Smaller font size */
+    padding: 5px 0; /* Adjust padding */
+  }
+
+  #map iframe {
+    height: 200px; /* Reduced height */
+  }
+
+  .container {
+    max-width: 90%; /* Wider on mobile */
+  }
+}

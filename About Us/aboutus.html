@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="aboutus.css">
+  
+  <title>About Us Azad Ekta Mitra Manadal </title>
+  <script src="script.js" defer></script>
+
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon/favicon-64x64.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="/favicon/favicon-128x128.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+</head>
+
+<body>
+
+  <nav>
+    <a href="/index.html"><img src="/Asset/logo1.png" alt="Logo"></a>
+    <div id="nav-2">
+      <h4><a href="/index.html">Home</a></h4>
+      <h4><a href="/Members/members.html">Committee</a></h4>
+      <h4><a href="/About Us/aboutus.html" style="color: rgba(134, 33, 25); text-decoration: underline; text-transform: uppercase;">About Us</a></h4>
+      <h4><a href="/Contact Us/contactus.html">Contact Us</a></h4>
+      <button class="nav-button" id="qrbtn">Donations</button>
+    </div>
+  </nav>
+
+  <div id="scan" class="qr-scan">
+    <div class="scan-qr">
+      <button class="close-button" id="closeQRCodeBtn">&times; Close</button>
+      <div class="pay">
+        <img src="/Asset/qr_payment.jpg" alt="QR Code">
+      </div>
+    </div>
+  </div>
+
+  <div class="about-us">
+    <img src="/Asset/img8.jpg" alt="Ganesh Chaturthi Celebration">
+    <h1 class="w-text wow fadeInUp" data-wow-delay="0.2s">Let's Celebrate Ganesh Chaturthi Together</h1>
+    <p>
+      Welcome to the <span class="highlight">Azad Ekta Mitra Mandal (Trust)</span> Sarvajanik Ganeshotsav Mandal! Established in <span class="highlight">1990</span>, we have proudly celebrated Ganesh Chaturthi with unparalleled enthusiasm and joy for over <span class="highlight">30 years</span>. As the biggest Cultural Event in Pune City, our festival is a grand and joyous occasion that brings together the community in celebration.
+    </p>
+    <p>
+      At Azad Ekta Mitra Mandal, our dedicated team members give their 100% to make each Ganesh Chaturthi festival not only memorable but truly extraordinary. Our commitment is to preserving the spirit of Ganesh Chaturthi is unwavering, and we invite you to join us in this vibrant celebration.
+    </p>
+    <a href="/Contact Us/contactus.html" class="cta-button wow fadeInUp" data-wow-delay="0.4s"> Be Part of the Action</a>
+    <br>
+
+    <h2 class="w-text wow fadeInUp" data-wow-delay="0.2s">Follow Us on Instagram</h2>
+    <p>Be part of our family and celebrate Ganesh Chaturthi together! <br> Scan the QR Code to be part of the Ganesh Chaturthi</p>
+
+    <div class="qr-code-container"> 
+      <div class="qr-code">
+        <img src="/Asset/insta_QR.png" alt="QR Code for Donations">
+      </div>
+      <div class="qr-code-lightbox" id="lightbox">
+        <span class="close-btn" onclick="toggleLightbox()">×</span>
+        <img src="/Asset/insta_QR.png" alt="QR Code for Donations">
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="/index.html"><img src="/Asset/logo1.png" alt="Company Logo"></a>
+        </div>
+        <div class="footer-info">
+          <p>Azad Ekta Mitra Mandal (Trust)</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2024 Azad Ekta Mitra Manadal. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="scroll-up">
+    <img src="/Asset/uparrow.png" alt="Scroll Up">
+  </div>
+
+  <script src="http://translate.google.com/translate_a/element.js?cd=loadGoogleTranslate"></script>
+
+  <script>
+    const qrCodeContainer = document.querySelector('.qr-code-container');
+    const lightbox = document.getElementById('lightbox');
+
+    qrCodeContainer.addEventListener('click', function() {
+      qrCodeContainer.classList.toggle('active');
+      lightbox.classList.toggle('active');
+    });
+
+    function toggleLightbox() {
+      qrCodeContainer.classList.remove('active');
+      lightbox.classList.remove('active');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const scrollUpButton = document.querySelector('.scroll-up');
+      
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) { 
+          document.body.classList.add('scrolled');
+        } else {
+          document.body.classList.remove('scrolled');
+        }
+      });
+    
+      scrollUpButton.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    document.getElementById('qrbtn').addEventListener('click', function() {
+      document.getElementById('scan').style.display = 'flex';
+    });
+
+    document.getElementById('closeQRCodeBtn').addEventListener('click', function() {
+      document.getElementById('scan').style.display = 'none';
+      window.location.href = '/Donation/donation.html'; 
+    });
+
+    window.onclick = function(event) {
+      if (event.target === document.getElementById('scan')) {
+        document.getElementById('scan').style.display = 'none';
+        window.location.href = '/Donation/donation.html';
+      }
+    }
+  </script>
+
+</body>
+</html>

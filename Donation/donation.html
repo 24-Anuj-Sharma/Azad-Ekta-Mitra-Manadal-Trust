@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Donation </title>
+  <link rel="stylesheet" href="donation.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+
+  <!-- ICO file for legacy browsers -->
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+  <!-- PNG files for different sizes -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon/favicon-64x64.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="/favicon/favicon-128x128.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon/favicon-192x192.png">
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+</head>
+<body>
+  <nav>
+    <a href="/index.html"><img src="/Asset/logo1.png" alt="Logo"></a>
+    
+    <div id="nav-2">
+      <h4><a href="/index.html">Home</a></h4>
+      <h4><a href="/Members/members.html">Committee</a></h4>
+        <h4><a href="/About Us/aboutus.html">About Us</a></h4>
+        <h4><a href="/Contact Us/contactus.html">Contact Us</a></h4>
+        <button class="nav-button" id="qrbtn" style="background-color: aliceblue; text-decoration: underline; text-transform: uppercase;">Donations</button>
+
+  </nav>
+
+  <!-- Donation Section -->
+
+
+  <div class="donation-container">
+    <h1>Make a Donation</h1>
+    <div class="donation-content">
+        <p>If any devotee wishes to send donations to the Azad Ekta Mitra Mandal, they can do so through the following methods:</p>
+        <p>
+            <strong>Online Donations:</strong> You can make online donations using Debit Card, Credit Card, or Net Banking.
+        </p>
+        <p>
+            <strong>UPI ID :</strong> 8805601990@upi<br>
+            <strong>Bank Details:</strong><br>
+            <strong>Account Name:</strong> Azad Ekta Mitra Mandal<br>
+            <strong>Account Number:</strong> 610000000025798<br>
+            <strong>Bank Name:</strong> <br>
+            <strong>IFSC Code:</strong> SRCB0000342
+        </p>
+        <p><strong>Note:</strong> The Mandal is not covered under Section 80-G of the Income Tax Act 1961 of India.</p>
+        <p>We also look forward to hearing your views about the site. Kindly send us your comments by Email: <a href="mailto:.com">.com</a></p>
+        
+        <div class="qr-code-container">
+            <div class="qr-code">
+                <img src="/Asset/qr_payment.jpg" alt="QR Code for Donations">
+            </div>
+            <div class="qr-code-lightbox" id="lightbox">
+                <span class="close-btn" onclick="toggleLightbox()">×</span>
+                <img src="/Asset/qr_payment.jpg" alt="QR Code for Donations">
+            </div>
+        </div>
+        <p>Click on the QR Code to view it clearly and make your payment.</p>
+    </div>
+</div>
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="/index.html"><img src="/Asset/logo1.png" alt="Logo"></a>
+        </div>
+        <div class="footer-info">
+          <p> Azad Ekta Mitra Mandal (Trust) </p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2024 Azad Ekta Mitra Manadal. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="scroll-up">
+    <img src="/Asset/uparrow.png" alt="Scroll Up">
+  </div>
+
+
+  <script>
+//     document.getElementById('qrbtn').addEventListener('click', function() {
+//     document.getElementById('qrcode').style.display = 'flex';
+// });
+
+// document.getElementById('closeQRCodeBtn').addEventListener('click', function() {
+//     document.getElementById('qrcode').style.display = 'none';
+//     window.location.href = '/Donation/donation.html'; 
+// });
+
+// window.onclick = function(event) {
+//     if (event.target === document.getElementById('qrcode')) {
+//         document.getElementById('qrcode').style.display = 'none';
+//         window.location.href = '/Donation/donation.html';
+//     }
+// }
+
+// Show QR COde on press 
+const qrCodeContainer = document.querySelector('.qr-code-container');
+    const lightbox = document.getElementById('lightbox');
+
+    qrCodeContainer.addEventListener('click', function() {
+        qrCodeContainer.classList.toggle('active');
+        lightbox.classList.toggle('active');
+    });
+
+    function toggleLightbox() {
+        qrCodeContainer.classList.remove('active');
+        lightbox.classList.remove('active');
+    }
+</script>
+
+
+</body>
+</html>

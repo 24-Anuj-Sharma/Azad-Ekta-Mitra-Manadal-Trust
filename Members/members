@@ -1,0 +1,529 @@
+*{
+  margin: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+ 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fefdcf;
+  /* background-color: #fdf4e3; */
+  /* color: #333; */
+}
+
+/* Community heading  */
+.header {
+  margin: 20px 0px 0px;
+  background-color: #a52a2a;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  border-bottom: 5px solid gold;
+}
+
+/* Community Style  */
+.committee-list {
+  background-color: #d9c7a3;
+  /* background-color: #fff; */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 900px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li.title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #a52a2a;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 10px solid gold;
+  margin: 0 -8px;
+  top: 10px;
+  position: relative;
+  background-color: rgba(130, 33, 26, 255);
+  padding-top: 9px;
+}
+
+.footer {
+  background-color: rgba(130, 33, 26, 255);
+  color: rgba(130, 33, 26, 255);
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  width: 80px;
+  height: auto;
+}
+
+.footer-info {
+  margin-left: 20px;
+}
+
+.footer-info p {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* About Us Imager  */
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+.social-icons img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
+.social-icons {
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  color: whitesmoke;
+  background-color: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+}
+
+.social-icons a:hover {
+  transform: translate(-3px);
+}
+
+/* Scroll to Top Button */
+.scroll-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #eb0000;
+  color: aqua;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+}
+
+.scroll-up img {
+  width: 20px;
+  height: 20px;
+}
+
+.scroll-up:hover {
+  background-color: blueviolet;
+}
+
+body.scrolled .scroll-up {
+  display: block;
+}
+
+/* Line */
+hr {
+  border: groove;
+  border-top: 2px solid #000; 
+  margin: 20px 0; 
+}
+
+  /* Navigation Bar  */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all ease 0.4s;
+    }
+  
+  /* Fixed Nacigation */
+  #nav-2 {
+    display: flex;
+    margin: 5px;
+  }
+  
+  #nav-2 h4 {
+    display: flex;
+    padding: 10px 20px;
+  }
+  
+  #nav-2 h4::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+  
+  }
+  
+  #nav-2 h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+  }
+  
+  #nav-2 h4 a {
+    color: #887555;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+  }
+  
+  #nav-2 h4:hover a {
+    color: rgba(134, 33, 25);
+  }
+  
+  /* Navigation Image  */
+  nav img {
+    
+    margin: 0px 0px -5px;
+    top: 0px;
+    position: relative;
+    width: max-content;
+    height: 92px;
+}
+
+
+.nav-button {
+  background-color: rgba(134, 33, 25);
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-button:hover {
+  background-color: #a6281a;
+}
+/* QR Code Popup  */
+.qr {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-content {
+  text-align: center;
+}
+
+.close-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.close-button:hover {
+  background-color: #c62828;
+}
+
+.qr-code {
+  margin: 20px 0;
+}
+
+/* QR Imagev  */
+.qr-content img{
+  width: 50%;
+  height: 100%;
+}<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="members.css">
+  <title>Committee Page</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <script src="script.js"></script>
+
+  <!-- ICO file for legacy browsers -->
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+  <!-- PNG files for different sizes -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon/favicon-64x64.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="/favicon/favicon-128x128.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon/favicon-192x192.png">
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="/favicon/site.webmanifest">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="/index.html"><img src="/Asset/logo1.png" alt="Logo"></a>
+    <div id="nav-2">
+      <h4><a href="/index.html">Home</a></h4>
+      <h4><a href="/Members/members.html"
+          style="color: rgba(134, 33, 25); text-decoration: underline; text-transform: uppercase;">Committee</a></h4>
+      <h4><a href="/About Us/aboutus.html">About Us</a></h4>
+      <h4><a href="/Contact Us/contactus.html">Contact Us</a></h4>
+      <button class="nav-button" id="qrbtn">Donations</button>
+  </nav>
+
+  <!-- Payment QR COde POPUP  -->
+  <div id="qrcode" class="qr">
+    <div class="qr-content">
+        <button class="close-button" id="closeQRCodeBtn">&times; Close</button>
+        <div class="qr-code">
+            <img src="/Asset/qr_payment.jpg" alt="QR Code">
+        </div>
+    </div>
+  </div>
+<!-- hEADING -->
+  <div class="header">
+    <h1>Committee</h1>
+  </div>
+
+  <div class="committee-list">
+    <ul>
+      <li class="title">अध्यक्ष</li>
+      <li>अनिकेत वाळके</li>
+    </ul>
+
+    <hr>
+
+    <ul>
+      <li class="title">उपाध्यक्ष:</li>
+      <li>शुभम धुमाळ</li>
+    </ul>
+
+    <hr>
+
+
+    <div class="line"></div>
+    <ul>
+      <li class="title">खजिनदार:</li>
+      <li>विशाल वस्त्रद</li>
+    </ul>
+
+    <hr>
+
+    <ul>
+      <li class="title">सहखजिनदार :</li>
+      <li>चैतन्य जोशी</li>
+    </ul>
+
+
+    <hr>
+
+
+    <ul>
+      <li class="title">सचिव:</li>
+      <li>स्वराज आढाव</li>
+    </ul>
+
+    <hr>
+
+    <ul>
+      <li class="title">सहसचिव:</li>
+      <li>श्रेयस जोशी</li>
+    </ul>
+
+
+    <hr>
+
+
+    <ul>
+      <li class="title">कार्याध्यक्ष:</li>
+      <li>हेमंत घाडगे</li>
+    </ul>
+
+    <hr>
+
+
+    <ul>
+      <li class="title">व्यवस्थापक</li>
+      <p>नरेश शर्मा, निखिल देवकर, आदित्य चांधेरे, सूरज मालवेकर</p>
+    </ul>
+
+    <hr>
+
+
+    <ul>
+      <li class="title">प्रमुख कार्यकर्ते </li>
+      <p>सागर साळुंके, अक्षय रेडेकर, ललित शर्मा, महेश थोरात, <br>
+        साहिल औस्वाल, रोहित यलगोंडा, अनुज शर्मा. <br>
+      </p>
+    </ul>
+
+    <hr>
+
+    <ul>
+      <li class="title">संयोजक:</li>
+      <p>श्रीरंग वेहळे, ऋषिकेश थिटे, कमलेश सोनायल्लू, अमित मांदळे, <br>
+        इरशाद शेख, ताहिर शेख. <br>
+      </p>
+    </ul>
+
+
+    <hr>
+
+    <ul>
+      <li class="title">विश्वस्त समिती:</li>
+      <p>मागर ढेकणे, सुरज ढेकणे, संदिप वेहळे, सचिन वाळके, अक्षय वेहळे, दत्ता पखाले, नितीन गायकवाड, अनिकेत तांबे, <br>
+        हेमंत भुतकर, आकाश वसवे, योगेश गुरव, एकनाथ लावरे, विकास मोडक, कर्ण सोनवणे, वेतन व्यास. <br>
+      </p>
+    </ul>
+
+    <hr>
+
+    <ul>
+      <li class="title">मार्गदर्शक :</li>
+      <p>भगवती प्रसाद शर्मा, अशोक ढेकणे, गणेश वाळके, अरविंद घाडगे, नागेश सोनायत्तू, पवन शर्मा, भुतकर सर, तांबे सर, <br>
+        जयंत जोशी, बोरकर सर, ईश्वर काळे, गिरीष केवल्या, राहुल वाळके, सुलाब वेहळे, भागाजी थिटे, गेनू थिटे. <br>
+      </p>
+    </ul>
+
+    <hr>
+
+
+    <ul>
+      <li class="title">सल्लागार:</li>
+      <p>किशोर थिटे, उध्दव थिटे, प्रविण आढाव, ज्ञानेश्वर जैद, तुकाराम जैद, एम.एस. रेड्डी, विजय शिटे, बी. पी. जांगीड,
+        <br>
+        जालिंदर गायकवाड, लहानू लावरे, नूरमहंमद मनियार, नवनाथ काळे, चंद्रशेखर, संदिप कुरूमकर, अविनाश काळे, <br>
+        सत्यवान वाळके, दत्तात्रय वाळके, राजेंद्र जोशी, संतोष कुरूमकर, पुरोहित साहेब, यशवंत थोरात, निरंजन घाग, गजेंद्र
+        <br>
+        जोशी, विरेंद्र जोशी, मनोज जोशी, सिद्धू पानम.
+      </p>
+    </ul>
+
+    <hr>
+
+
+    <ul>
+      <li class="title">सभासद:</li>
+      <p>अमित घाग, संतोष पखाले, संतोष थोरात, राजेंद्र लावरे, सार्थक शिंदे, टिकी राहांगडाले, कृष्णा झेंडे, सर्वज्ञ
+        बो-हाडे,<br>
+        आदित्य कुरूमकर, सार्थक कुरूमकर, विनोद वैष्णव, प्रथमेश काळे, प्रज्वल काळे, ओंकार, साबळे, आर्य थोरात, राहुल<br>
+        जांगीड, अनिष सिंच, अमन मिंच, हर्ष तांबे, आर्यन सोनायल्लू, सौरभ अगरवाल, निखिल गडकर, ईरफान शेख, सौरभ माने,<br>
+        किशोर तांबे, ओंकार घाडगे, कैफ पिरजादे, गणेश थोरात, विनोद वैष्णव, कैशाल रोडे, कुणाल रोडे, आर्यन थोरात. <br>
+      </p>
+    </ul>
+
+    <hr>
+
+    <ul>
+      <li class="title">कार्याध्यक्ष:</li>
+      <li>हेमंत घाडगे</li>
+    </ul>
+  </div><!-- Footer Sectiom -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="/index.html"> <img src="/Asset/logo.png" alt="Company Logo"></a>
+        </div>
+        <div class="footer-info">
+          <p> Azad Ekta Mitra Mandal (Trust) </p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2024 Company Name. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="scroll-up">
+    <img src="/Asset/uparrow.png" alt="Scroll Up">
+  </div>
+
+  <script src="http://translate.google.com/translate_a/element.js?cd=loadGoogleTranslate"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const scrollUpButton = document.querySelector('.scroll-up');
+
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 100) { 
+          document.body.classList.add('scrolled');
+        } else {
+          document.body.classList.remove('scrolled');
+        }
+      });
+
+      scrollUpButton.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+// PAYMENT QR CODE POPUP
+    document.getElementById('qrbtn').addEventListener('click', function() {
+    document.getElementById('qrcode').style.display = 'flex';
+});
+
+document.getElementById('closeQRCodeBtn').addEventListener('click', function() {
+    document.getElementById('qrcode').style.display = 'none';
+    window.location.href = '/Donation/donation.html'; 
+});
+
+window.onclick = function(event) {
+    if (event.target === document.getElementById('qrcode')) {
+        document.getElementById('qrcode').style.display = 'none';
+        window.location.href = '/Donation/donation.html';
+    }
+}
+</script>
+</body>
+</html>
